@@ -11,7 +11,7 @@ Tugas kelompok mata kuliah Manajemen Proyek Perangkat Lunak - Kelompok 4.
 - Fikri Ahmad Ramdani - 1247050003
 - Hafizh Maulana Praditya - 1247050081
 - Kahlil Gibran - 1247050136
-- M. Ariel Davinsyah Putra - 1247050xxx
+- M. Ariel Davinsyah Putra - 1247050122
 - M. Asad Farhan Khomeini - 1247050116
 - M. Caesar Rayvha Ul Haque - 1247050130
 
