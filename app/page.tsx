@@ -34,13 +34,13 @@ export default function PosPage() {
   const [checkoutSuccess, setCheckoutSuccess] = useState<{ invoice: string; total: number } | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  // Generate continuous invoice number
-  const invoiceNumber = useMemo(() => {
-    const d = new Date();
-    const dateStr = d.toISOString().slice(0, 10).replace(/-/g, "");
-    return `INV-${dateStr}-${Math.floor(1000 + Math.random() * 9000)}`;
+  // Generated client-side only, biar ga hydration mismatch (Math.random beda di server vs client)
+  const [invoiceNumber, setInvoiceNumber] = useState("");
+  useEffect(() => {
+    const dateStr = new Date().toISOString().slice(0, 10).replace(/-/g, "");
+    setInvoiceNumber(`INV-${dateStr}-${Math.floor(1000 + Math.random() * 9000)}`);
   }, [checkoutSuccess]);
-
+  
   const loadCatalog = async () => {
     try {
       const data = await getProducts();
